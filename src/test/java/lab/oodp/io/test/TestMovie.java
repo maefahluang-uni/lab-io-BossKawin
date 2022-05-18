@@ -11,6 +11,8 @@ import lab.oodp.io.movie.MovieReader;
 import lab.oodp.io.movie.MovieWriter;
 import lab.oodp.io.numchar.CharCounter;
 
+import java.io.IOException;
+
 public class TestMovie {
 	MovieReader cr;
 	MovieWriter cw;
@@ -26,7 +28,7 @@ public class TestMovie {
 	}
 
 	@Test
-	public void testMovieWriteRead() {
+	public void testMovieWriteRead() throws IOException {
 		cw.start();
 		cr.start();
 		Movie[] movies = cw.getMovieData();
